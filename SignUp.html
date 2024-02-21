@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .imgcontainer {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: auto;
+        }
+
+        .signup-details {
+            flex: 1;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .input-icon {
+            position: relative;
+        }
+
+        .input-icon i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            color: #aaa;
+        }
+
+        .input-field {
+            padding-left: 30px;
+        }
+
+        button[type="submit"],
+        button.create-account{
+            background-color: #5109ee;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%; /* Adjusted width to fit the container */
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            font-size: 14px;
+        }
+
+        button[type="submit"]:hover,
+        button.create-account:hover,
+        button.forgot-password:hover {
+            background-color: #45a049;
+        }
+
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .join-us {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .social-icons {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #5109ee;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="imgcontainer">
+            <img src="images/login.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="signup-details">
+            <div class="welcome-text">
+                <h2>Create an Account</h2>
+            </div>
+            <form action="signup_action_page.php" method="post">
+                <div class="input-icon input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                </div>
+                <div class="input-icon input-field">
+                    <i class="fas fa-envelope"></i> <!-- Changed icon to email icon -->
+                    <input type="text" placeholder="Enter Email" name="email" required> <!-- Changed input type to text -->
+                </div>
+                <div class="input-icon input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                </div>
+                <div class="input-icon input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" name="confirm_psw" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="join-us">
+                <p>Or you can join us on:</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
